@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Handloom</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="/asset/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="/asset/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="/asset/vendors/jvectormap/jquery-jvectormap.css">
+  <link rel="stylesheet" href="/asset/vendors/flag-icon-css/css/flag-icon.min.css">
+  <link rel="stylesheet" href="/asset/vendors/owl-carousel-2/owl.carousel.min.css">
+  <link rel="stylesheet" href="/asset/vendors/owl-carousel-2/owl.theme.default.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <!-- endinject -->
+  <!-- Layout styles -->
+  <link rel="stylesheet" href="/asset/css/style.css">
+  <!-- End layout styles -->
+  <link rel="shortcut icon" href="/asset/images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_sidebar.html -->
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+        <a class="sidebar-brand brand-logo" href="index.html"><img src="/img/logo.png" alt="logo"
+            style="width:100%; height:auto;" /></a>
+        <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="/assets/images/logo-mini.svg" alt="logo"
+            style="width:50%; height:auto;" /></a>
+      </div>
+      <ul class="nav">
+        <li class="nav-item profile">
+          <div class="profile-desc">
+            <div class="profile-pic">
+              <!-- <div class="count-indicator">
+                  <img class="img-xs rounded-circle " src="/assets/images/faces/face15.jpg" alt="">
+                  <span class="count bg-success"></span>
+                </div> -->
+
+            </div>
+            <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
+          </div>
+        </li>
+        <li class="nav-item nav-category">
+          <span class="nav-link">Navigation</span>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="/admin">
+            <span class="menu-icon">
+              <i class="mdi mdi-speedometer"></i>
+            </span>
+            <span class="menu-title">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="/userMngt">
+            <span class="menu-icon">
+              <i class="mdi mdi-chart-bar"></i>
+            </span>
+            <span class="menu-title">User Managment</span>
+          </a>
+        </li>
+
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="/orderMngt">
+            <span class="menu-icon">
+              <i class="mdi mdi-playlist-play"></i>
+            </span>
+            <span class="menu-title">Order Managment</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="/productMngt" aria-expanded="false" aria-controls="ui-basic">
+            <span class="menu-icon">
+              <i class="mdi mdi-laptop"></i>
+            </span>
+            <span class="menu-title">Product Managment</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="/categoryMngt">
+            <span class="menu-icon">
+              <i class="mdi mdi-table-large"></i>
+            </span>
+            <span class="menu-title">Category Managment</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="/couponMngt" aria-expanded="false" aria-controls="auth">
+            <span class="menu-icon">
+              <i class="mdi mdi-security"></i>
+            </span>
+            <span class="menu-title">Coupon Managment</span>
+          </a>
+        </li>
+
+        <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="/salesReport" aria-expanded="false" aria-controls="auth">
+            <span class="menu-icon">
+              <i class="mdi mdi-security"></i>
+            </span>
+            <span class="menu-title">Sales Report</span>
+          </a>
+        </li>
+
+        <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="/offers" aria-expanded="false" aria-controls="auth">
+            <span class="menu-icon">
+              <i class="mdi mdi-security"></i>
+            </span>
+            <span class="menu-title">offers</span>
+          </a>
+        </li>
+
+        <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="/categoryoffers" aria-expanded="false" aria-controls="auth">
+            <span class="menu-icon">
+              <i class="mdi mdi-security"></i>
+            </span>
+            <span class="menu-title">Category offers</span>
+          </a>
+        </li>
+
+        <!-- <li class="nav-item menu-items">
+          <a class="nav-link" href="/bannerMngt">
+            <span class="menu-icon">
+              <i class="mdi mdi-contacts"></i>
+            </span>
+            <span class="menu-title">Banner Managment</span>
+          </a>
+        </li> -->
+
+      </ul>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar p-0 fixed-top d-flex flex-row">
+        <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="/assets/images/logo-mini.svg"
+              alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <ul class="navbar-nav w-100">
+            <li class="nav-item w-100">
+              <h3 style="color: rgb(126, 126, 126); padding-top:15px; ">Sales Report</h3>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-nav-right">
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+                <div class="navbar-profile">
+                  <img class="img-xs rounded-circle" src="asset/images/faces/face15.jpg" alt="">
+                  <p class="mb-0 d-none d-sm-block navbar-profile-name">Admin</p>
+                  <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+                </div>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                aria-labelledby="profileDropdown">
+                <h6 class="p-3 mb-0">Profile</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-settings text-success"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject mb-1">Settings</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-logout text-danger"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject mb-1">Log out</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <p class="p-3 mb-0 text-center">Advanced settings</p>
+              </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+            data-toggle="offcanvas">
+            <span class="mdi mdi-format-line-spacing"></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="main-panel">
+        <div class="content-wrapper">
+
+
+          <div class="row mt-5">
+            <div class="col-12 grid-margin">
+              <div class=" row   mt-3">
+
+                <!-- <div class="col-12 col-sm-6">
+                  <div class="row m-0">
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <div class="col-sm-12">
+                          <form action="/sales-report">
+                            <select class="form-control" name="sortData">
+                              <option value="date">Date</option>
+                              <option value="totalPrice">Amount</option>
+                            </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="form-group row">
+                        <div class="col-sm-12">
+                          <select class="form-control" name="sortOrder">
+                            <option>Ascending</option>
+                            <option>Descending</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="sort form-group col-md-4 mb-3"><button class=" btn btn-primary form-control">
+                        sort
+                      </button></div>
+                    </form>
+                  </div>
+                </div> -->
+
+              </div>
+
+              <div class="row">
+                <form class="col-12" action="" id="sales-report-form">
+                  
+                  <% if (dateValues) { %>
+                    <div class="col-2">
+                      <label for="startDate">From: </label>
+                      <input id="startDate" type="date" value="<%= dateValues.startDate %>">
+                    </div>
+                    <div class="col-2">
+                      <label for="endDate">To: </label>
+                      <input id="endDate" type="date" value="<%= dateValues.endDate %>">
+                    </div>
+                    <% } else { %>
+                      <div class="col-2">
+                        <label for="startDate">From: </label>
+                        <input id="startDate" type="date">
+                      </div>
+                      <div class="col-2">
+                        <label for="endDate">To: </label>
+                        <input id="endDate" type="date">
+                      </div>
+                      <% } %>
+                        <button class="btn btn-primary ml-3 mb-3" id="filterBtn">filter</button>
+                </form>
+                <div class="ml-3">
+
+                  <button type="button" onclick="excelDownload()" id="excel-export"
+                    class="btn btn-success btn-icon-text ml-auto mb-1"> Excel <i
+                      class="mdi mdi-printer btn-icon-append"></i>
+                    <button type="button" onclick="printDiv('Print')"
+                      class="btn btn-info btn-icon-text ml-1 mr-auto mb-1"> Print <i
+                        class="mdi mdi-printer btn-icon-append"></i>
+                    </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Recent sales</h4>
+                  <div class="table-responsive" id="Print">
+                    <table class="table" id="sales-table">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="border-dark">S No</th>
+                          <th scope="col" class="border-dark">Order id</th>
+                          <th scope="col" class="border-dark">Username</th>
+                          <th scope="col" class="border-dark">Date</th>
+                          <th scope="col" class="border-dark">Products</th>
+                          <th scope="col" class="border-dark">No of items</th>
+                          <th scope="col" class="border-dark">TotalCost</th>
+                          <th scope="col" class="border-dark">Payment Method</th>
+                          <th scope="col" class="border-dark">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% salesData.forEach((sale, index)=> { %>
+                          <tr>
+                            <td>
+                              <%= index+1 %>
+                            </td>
+                            <td>
+                              <%= sale._id.toString().substr(-5) %>
+                            </td>
+                            <td>
+                              <%= sale.userId.name %>
+                            </td>
+                            <td>
+                              <%const startDate=new Date( sale.orderDate )%>
+                                <%const
+                                  startformattedDate=`${startDate.getDate()}-${startDate.getMonth()+1}-${startDate.getFullYear()}`%>
+                                  <%=startformattedDate%>
+                            </td>
+                            <td>
+                              <ul>
+                                <% sale.cartData.forEach(item=> { %>
+                                  <li>
+                                    <%= item.productId.name %>
+                                  </li>
+                                  <% }); %>
+                              </ul>
+                            </td>
+                            <td>
+                              <ul>
+                                <% sale.cartData.forEach(item=> { %>
+                                  <li>
+                                    <%= item.productQuantity %>
+                                  </li>
+                                  <% }); %>
+                              </ul>
+                            </td>
+                            <td>₹<%= sale.grandTotalCost %>
+                            </td>
+                            <td>
+                              <%= sale.paymentType %>
+                            </td>
+                            <td>
+                              <%= sale.orderStatus %>
+                            </td>
+                          </tr>
+                          <% }); %>
+                      </tbody>
+                    </table>
+
+                    <!--  -->
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- The popup message modal -->
+  <div id="popupModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-light text-dark">
+        <div class="modal-body">
+          <h5 id="modalHead" class="modal-title"></h5><br>
+          <p id="modalContent"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+
+  <script>
+
+
+    function excelDownload() {
+      // Get the table data
+      var table = document.getElementById("sales-table");
+      var wb = XLSX.utils.table_to_book(table, { sheet: "SheetJS" });
+
+      // Convert the workbook to an array buffer
+      var wbout = XLSX.write(wb, { bookType: "xlsx", type: "array" });
+
+      // Create a Blob object to store the workbook data
+      var blob = new Blob([wbout], { type: "application/octet-stream" });
+
+      // Generate a temporary anchor element and trigger the download
+      var a = document.createElement("a");
+      document.body.appendChild(a);
+      a.style = "display: none";
+      var url = window.URL.createObjectURL(blob);
+      var today = formatDateToString(new Date())
+      a.href = url;
+      a.download = "MF-" + today + ".xlsx";
+      a.click();
+
+      // Cleanup
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    }
+
+
+
+
+    const dateForm = document.getElementById('sales-report-form')
+
+
+    dateForm.addEventListener('submit', function (event) {
+      const now = new Date()
+      // const fromDate = document.getElementById( 'from' )
+      const from = document.getElementById('from').value
+      const to = document.getElementById('to').value
+      const fromDate = new Date(from)
+      const toDate = new Date(to)
+      if (fromDate > now) {
+        showModal('Warning', 'From date cannot be greater than Today')
+        event.preventDefault()
+      }
+      if (toDate > now) {
+        showModal('Warning', 'To date cannot be greater than Today')
+        event.preventDefault()
+      }
+      if (fromDate > toDate) {
+        showModal('Warning', 'From date cannot be greater than To date')
+        event.preventDefault()
+      }
+    })
+
+
+    function printDiv(divName) {
+      const printContents = document.getElementById(divName).innerHTML
+      const originalContents = document.body.innerHTML
+      document.body.innerHTML = printContents;
+      window.print()
+      document.body.innerHTML = originalContents
+      return
+    }
+
+    function showModal(title, message) {
+
+      const modalTitle = document.getElementById('modalHead')
+      const modalBody = document.getElementById('modalContent')
+
+      modalTitle.innerText = title;
+      modalBody.innerText = message;
+
+
+      // Show the popup message modal
+      $('#popupModal').modal('show');
+
+      // Hide the popup message modal when clicking outside of it
+      $(document).on('click', function (event) {
+        if (!$(event.target).closest('.modal-content').length) {
+          $('#popupModal').modal('hide');
+        }
+      });
+
+    }
+  </script>
+
+
+  <script>
+    function formatDateToString(date) {
+      // Ensure we have a valid date object
+      if (!(date instanceof Date) || isNaN(date)) {
+        return "Invalid Date";
+      }
+
+      // Get the day, month, and year components from the date
+      const day = String(date.getDate()).padStart(2, "0");
+      const month = String(date.getMonth() + 1).padStart(2, "0");
+      const year = String(date.getFullYear());
+
+      // Concatenate the components with hyphens and return the formatted string
+      return `${day}-${month}-${year}`;
+    }
+
+    // Example usage:
+    const date = new Date(); // Replace this with your date object
+    const formattedDate = formatDateToString(date);
+
+  </script>
+
+
+  <script>
+    let startDate = document.getElementById('startDate')
+    let endDate = document.getElementById('endDate')
+
+    startDate.addEventListener('change', function () {
+      let startDateValue = startDate.value;
+      console.log(startDateValue)
+      console.log(endDate)
+      endDate.setAttribute('min', startDateValue);
+    });
+
+    endDate.addEventListener('change', function () {
+      let endDateValue = endDate.value;
+      startDate.setAttribute('max', endDateValue);
+    });
+
+  </script>
+
+  <script>
+    let filterBtn = document.getElementById('filterBtn')
+    filterBtn.addEventListener('click', async (e) => {
+      e.preventDefault()
+      let startDate = document.getElementById('startDate').value
+      let endDate = document.getElementById('endDate').value
+      let formData = { startDate, endDate }
+      console.log(formData)
+
+      let response = await fetch('/salesReport/filter',
+        {
+          method: 'POST',
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData)
+        })
+      let result = await response.json()
+
+      if (result.success) {
+        console.log('hello')
+        location.reload()
+      }
+    })
+  </script>
+
+
+
+
+</body>

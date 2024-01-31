@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Handloom</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="/asset/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="/asset/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="/asset/vendors/jvectormap/jquery-jvectormap.css">
+  <link rel="stylesheet" href="/asset/vendors/flag-icon-css/css/flag-icon.min.css">
+  <link rel="stylesheet" href="/asset/vendors/owl-carousel-2/owl.carousel.min.css">
+  <link rel="stylesheet" href="/asset/vendors/owl-carousel-2/owl.theme.default.min.css">
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha256-WZo3u1a8Tpu+oP1eJQTUQjFMKPEB94+PJ27eHz32Aak="
+  crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css"
+    integrity="sha512-cyzxRvewl+FOKTtpBzYjW6x6IAYUCZy3sGP40hn+DQkqeluGRCax7qztK2ImL64SA+C7kVWdLI6wvdlStawhyw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <link rel="stylesheet" type="text/css"
+    href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css"
+    href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
+  <script type="text/javascript" charset="utf8"
+    src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" charset="utf8"
+    src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <!-- endinject -->
+  <!-- Layout styles -->
+  <link rel="stylesheet" href="/asset/css/style.css">
+  <!-- End layout styles -->
+  <!-- <link rel="shortcut icon" href="/assets/images/favicon.png" /> -->
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_sidebar.html -->
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+        <a class="sidebar-brand brand-logo" href="index.html">Handloom</a>
+        <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="/assets/images/logo-mini.svg" alt="logo"
+            style="width:50%; height:auto;" /></a>
+      </div>
+      <ul class="nav">
+        <li class="nav-item profile">
+          <div class="profile-desc">
+            <div class="profile-pic">
+              <!-- <div class="count-indicator">
+                  <img class="img-xs rounded-circle " src="/assets/images/faces/face15.jpg" alt="">
+                  <span class="count bg-success"></span>
+                </div> -->
+
+            </div>
+            <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
+          </div>
+        </li>
+        <li class="nav-item nav-category">
+          <span class="nav-link">Navigation</span>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="/admin">
+            <span class="menu-icon">
+              <i class="mdi mdi-speedometer"></i>
+            </span>
+            <span class="menu-title">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="/userMngt">
+            <span class="menu-icon">
+              <i class="mdi mdi-chart-bar"></i>
+            </span>
+            <span class="menu-title">User Managment</span>
+          </a>
+        </li>
+
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="/orderMngt">
+            <span class="menu-icon">
+              <i class="mdi mdi-playlist-play"></i>
+            </span>
+            <span class="menu-title">Order Managment</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="/productMngt" aria-expanded="false" aria-controls="ui-basic">
+            <span class="menu-icon">
+              <i class="mdi mdi-laptop"></i>
+            </span>
+            <span class="menu-title">Product Managment</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="/categoryMngt">
+            <span class="menu-icon">
+              <i class="mdi mdi-table-large"></i>
+            </span>
+            <span class="menu-title">Category Managment</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="/couponMngt" aria-expanded="false" aria-controls="auth">
+            <span class="menu-icon">
+              <i class="mdi mdi-security"></i>
+            </span>
+            <span class="menu-title">Coupon Managment</span>
+          </a>
+        </li>
+
+        <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="/salesReport" aria-expanded="false" aria-controls="auth">
+            <span class="menu-icon">
+              <i class="mdi mdi-security"></i>
+            </span>
+            <span class="menu-title">Sales Report</span>
+          </a>
+        </li>
+
+        <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="/offers" aria-expanded="false"
+            aria-controls="auth">
+            <span class="menu-icon">
+              <i class="mdi mdi-security"></i>
+            </span>
+            <span class="menu-title">offers</span>
+          </a>
+        </li>
+
+        <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="/categoryoffers" aria-expanded="false" aria-controls="auth">
+            <span class="menu-icon">
+              <i class="mdi mdi-security"></i>
+            </span>
+            <span class="menu-title">Category offers</span>
+          </a>
+        </li>
+
+        <!-- <li class="nav-item menu-items">
+          <a class="nav-link" href="/admin/bannerMngt">
+            <span class="menu-icon">
+              <i class="mdi mdi-contacts"></i>
+            </span>
+            <span class="menu-title">Banner Managment</span>
+          </a>
+        </li> -->
+
+      </ul>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar p-0 fixed-top d-flex flex-row">
+        <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo-mini" href="#"><img src="asset/images/logo-mini.svg" alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <ul class="navbar-nav w-100">
+            <li class="nav-item w-100">
+              <h3 style="color: rgb(126, 126, 126); padding-top:15px; ">Product Managment</h3>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-nav-right">
+            <a href="/addProducts"
+              style="width:200px; height:40px; display: flex;justify-content: center; align-items: center;"
+              class="add btn btn-primary todo-list-add-btn">Add products</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+                <div class="navbar-profile">
+                  <img class="img-xs rounded-circle" src="asset/images/faces/face15.jpg" alt="">
+                  <p class="mb-0 d-none d-sm-block navbar-profile-name">Admin</p>
+                  <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+            data-toggle="offcanvas">
+            <span class="mdi mdi-format-line-spacing"></span>
+          </button>
+        </div>
+      </nav>
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Image</th>
+                <th scope="col">Category</th>
+                <th scope="col">Product status</th>
+                <th scope="col">Quantity</th>
+                
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% products.forEach(item=>{ %>
+                <tr>
+                  <th scope="row">
+                    <%= item.name %>
+                  </th>
+                  <td>
+
+                    <% if (item.mainImage ) { %>
+                      <img src="/product-images/<%= item.mainImage[0]%>"
+                        style="height: 60px; width: 60px; border-radius: 0;" alt="<%= item.mainImage.filename %>">
+                      <% } %>
+
+                  </td>
+
+                  <td>
+                    <%=item.category %>
+                  </td>
+                  <td>
+                    <%=item.status %>
+                  </td>
+                  <td>
+                    <%= item.quantity %>
+                  </td>
+                  
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+
+                      <a href="/productEdit/<%=item._id%>"
+                        style="background-color:  rgb(36, 36, 39); color: white; padding: 10px 40px; font-size: 18px; font-weight: 300;">Edit</a>
+
+                      <%if(item.status=='available' ){%>
+
+                        <form method="post" action="/unlist-product/<%=item._id%>">
+                          <button type="submit"
+                            style="background-color: rgb(194, 21, 18); color: white; padding: 10px 40px; font-size: 18px; font-weight: 300;"
+                            onclick="return confirm('are you sure you want to list')">unlist</button>
+                        </form>
+
+                        <%} else{ %>
+
+                          <form method="post" action="/list-product/<%=item._id%>">
+                            <button type="submit"
+                              style="background-color: rgb(17, 129, 30); color: white; padding: 10px 52px; font-size: 18px; font-weight: 300;"
+                              onclick="return confirm('are you sure you want to unlist')">list</button>
+
+                          </form>
+
+                          <%}%>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="" style="font-size: 25px; color: rgb(2, 38, 19);font-weight: bold;"><ion-icon
+                        name="eye-outline"></ion-icon></a>
+                  </td>
+                </tr>
+
+                <% }) %>
+
+
+            </tbody>
+          </table>
+
+
+          <div class="col-lg-">
+            <nav aria-label="secondary-nav border-bottom">
+              <ul class="pagination" style="justify-content:center;">
+                <% pagination.forEach(function(item, index) { %>
+                  <li class="page-item"><a class="page-link" href="/productMngt/?page=<%= index + 1 %>"
+                      style="color: rgb(255, 255, 255);">
+                      <%= index + 1 %>
+                    </a></li>
+                  <% }); %>
+              </ul>
+            </nav>
+          </div>
+
+        </div>
+
+      </div>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <div class="modal fade" id="discountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content rounded-0">
+            <% if (availableOffers && availableOffers.length> 0) { %>
+              <% for (offer of availableOffers) { %>
+                <div data-offerid="<%= offer._id %>" style="cursor: pointer;" class="modal-body text-center">
+                  <div class="icon text-danger">
+                    <i style="font-size: 20px;" class="fas fa-gift"></i>
+                  </div>
+                  <div class="notice">
+                    <h2>
+                      <%= offer.name %>
+                    </h2>
+                    <h4>
+                      <%= offer.percentage %>% Discount
+                    </h4>
+                    <p>Valid from <%= offer.startingDate.toISOString().split('T')[0] %> to <%=
+                      offer.expiryDate.toISOString().split('T')[0]  %>
+                    </p>
+                  </div>
+                  <div class="code"></div>
+                </div>
+                <% } %>
+                  <% } %>
+          </div>
+        </div>
+      </div>
+
+
+
+      <style>
+        .badge {
+          margin-top: 10px;
+        }
+
+        .description-cell .description-content {
+          max-width: 200px;
+          /* Adjust the value as per your preference */
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .description-cell.collapsed .description-content {
+          max-width: none;
+          white-space: normal;
+          overflow: visible;
+          text-overflow: clip;
+        }
+
+        .description-cell .toggle-description {
+          background: none;
+          border: none;
+          margin-top: 8px;
+          color: rgb(97, 255, 108);
+          cursor: pointer;
+          padding: 0;
+        }
+
+        .table th img,
+        .jsgrid .jsgrid-table th img,
+        .table td img,
+        .jsgrid .jsgrid-table td img {
+          width: 100px;
+        }
+      </style>
+
+     
+
+      <!-- Include jQuery before your script -->
+      <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI/t1q61J3uAB8FNr50X4FQojL1D3R00S+8fHWFs=" crossorigin="anonymous"></script> -->
+
+      <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-4s3TDf8FhfJw2U+LgPgIthkmuZEykz5yzRCZl6EnTL1tbP6o5P42L2T0u8B6Z/r"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+<!-- Your custom script -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    function showModal(productId) {
+        $('#discountModal').modal('show');
+        const offerElements = document.querySelectorAll('.modal-body.text-center');
+        offerElements.forEach((element) => {
+            element.onclick = function () {
+                const offerId = this.getAttribute('data-offerid');
+                enterOffer(offerId, productId);
+            };
+        });
+    }
+
+    async function enterOffer(offerId, productId) {
+        $('#discountModal').modal('hide');
+        const response = await axios.patch('/apply-product-offer', { offerId, productId });
+        if (response.data.success) {
+            alert('Offer applied');
+            window.location = '/productMngt';
+        }
+    }
+
+    async function removeOffer(productId) {
+        try {
+            console.log('hiii');
+            const response = await axios.patch('/remove-product-offer', { productId });
+            if (response.data.success) {
+                window.location = '/productMngt';
+            }
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
+</script>
+
+
+
+</body>
+
+</html>

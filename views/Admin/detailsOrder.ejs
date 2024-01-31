@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Handloom</title>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"
+        integrity="sha384-b1qV3FPq7bIF1F7kXjw6TLPv0f/Z9wDExypZFFkNOZIJKFfEcNAoH5Mk5q/nq4G"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script> -->
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="/asset/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/asset/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="/asset/vendors/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="/asset/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/asset/vendors/owl-carousel-2/owl.carousel.min.css">
+    <link rel="stylesheet" href="/asset/vendors/owl-carousel-2/owl.theme.default.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="/asset/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="/asset/images/favicon.png" />
+</head>
+
+<body>
+    <div class="container-scroller">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+                <a class="sidebar-brand brand-logo" href="index.html"><img src="/img/logo.png" alt="logo"
+                        style="width:100%; height:auto;" /></a>
+                <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="asset/images/logo-mini.svg"
+                        alt="logo" style="width:50%; height:auto;" /></a>
+            </div>
+            <ul class="nav">
+                <li class="nav-item profile">
+                    <div class="profile-desc">
+                        <div class="profile-pic">
+                            <!-- <div class="count-indicator">
+                  <img class="img-xs rounded-circle " src="/assets/images/faces/face15.jpg" alt="">
+                  <span class="count bg-success"></span>
+                </div> -->
+
+                        </div>
+                        <a href="#" id="profile-dropdown" data-toggle="dropdown"><i
+                                class="mdi mdi-dots-vertical"></i></a>
+                    </div>
+                </li>
+                <li class="nav-item nav-category">
+                    <span class="nav-link">Navigation</span>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="/admin">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-speedometer"></i>
+                        </span>
+                        <span class="menu-title">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="/userMngt">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-chart-bar"></i>
+                        </span>
+                        <span class="menu-title">User Managment</span>
+                    </a>
+                </li>
+
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="/orderMngt">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-playlist-play"></i>
+                        </span>
+                        <span class="menu-title">Order Managment</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="/productMngt" aria-expanded="false"
+                        aria-controls="ui-basic">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-laptop"></i>
+                        </span>
+                        <span class="menu-title">Product Managment</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="/categoryMngt">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-table-large"></i>
+                        </span>
+                        <span class="menu-title">Category Managment</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="/couponMngt" aria-expanded="false"
+                        aria-controls="auth">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-security"></i>
+                        </span>
+                        <span class="menu-title">Coupon Managment</span>
+                    </a>
+                </li>
+
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="/salesReport" aria-expanded="false"
+                        aria-controls="auth">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-security"></i>
+                        </span>
+                        <span class="menu-title">Sales Report</span>
+                    </a>
+                </li>
+
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="/offers" aria-expanded="false"
+                        aria-controls="auth">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-security"></i>
+                        </span>
+                        <span class="menu-title">offers</span>
+                    </a>
+                </li>
+
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="/categoryoffers" aria-expanded="false"
+                        aria-controls="auth">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-security"></i>
+                        </span>
+                        <span class="menu-title">Category offers</span>
+                    </a>
+                </li>
+
+                <!-- <li class="nav-item menu-items">
+          <a class="nav-link" href="/admin/bannerMngt">
+            <span class="menu-icon">
+              <i class="mdi mdi-contacts"></i>
+            </span>
+            <span class="menu-title">Banner Managment</span>
+          </a>
+        </li> -->
+
+            </ul>
+        </nav>
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_navbar.html -->
+            <nav class="navbar p-0 fixed-top d-flex flex-row">
+                <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+                    <a class="navbar-brand brand-logo-mini" href="index.html"><img src="asset/images/logo-mini.svg"
+                            alt="logo" /></a>
+                </div>
+                <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+                    <button class="navbar-toggler navbar-toggler align-self-center" type="button"
+                        data-toggle="minimize">
+                        <span class="mdi mdi-menu"></span>
+                    </button>
+                    <ul class="navbar-nav w-100">
+                        <li class="nav-item w-100">
+                            <h3 style="color: rgb(126, 126, 126); padding-top:15px; ">Order Managment</h3>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="main-panel">
+                <div class="content-wrapper">
+
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <% order.cartData.forEach((item,index)=>{ %>
+                                <tr>
+                                    <td>
+                                        <img src="/product-images/<%= item.productId.mainImage[0]%>" alt=""
+                                            style="width: 100px; height: 100px;">
+                                        <%=item.productId.name %>
+                                    </td>
+                                    <td>
+                                        <%= item.productQuantity %>
+                                    </td>
+                                    <td>
+                                        ₹<%= item.productId.price %>
+                                    </td>
+                                    <td>
+                                        ₹<%= item.totalCostPerProduct %>
+                                    </td>
+                                </tr>
+                                <% }) %>
+
+                        </tbody>
+                    </table><br>
+                    <hr>
+
+                    <!-- <div class="address_actions">
+                        <div class="address">
+                            <div class="address-card">
+
+                                <span class="font1"> Shipping Address:</span>
+                                <span class="font2">
+                                    <%=order.address.name%>
+                                </span>
+                                <span class="font2">Phone number:<%=order.address.mobile%></span>
+                                <span class="font2">Pincode:<%=order.address.pincode%></span>
+                                <span class="font2">
+                                    <%=order.address.village%>
+                                </span>
+                                <span class="font2">
+                                    <%=order.address.landmark%>
+                                </span>
+                                <span class="font2">
+                                    <%=order.address.city%>
+                                </span>   
+
+                            </div>
+                        </div>
+                        <div class="address">
+                            <div class="address-card">
+
+                                <span class="font1">Billing Address:</span>
+                                <span class="font2">
+                                    <%=order.address.name%>
+                                </span>
+                                <span class="font2">Phone number:<%=order.address.mobile%></span>
+                                <span class="font2">Pincode:<%=order.address.pincode%></span>
+                                <span class="font2">
+                                    <%=order.address.village%>
+                                </span>
+                                <span class="font2">
+                                    <%=order.address.landmark%>
+                                </span>
+                                <span class="font2">
+                                    <%=order.address.city%>
+                                </span>
+
+                            </div>
+                        </div>
+
+
+                    </div> -->
+
+                    <div class="orderBox text-nowrap mb-4">
+                        <h4>Order Status:</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Order Id</th>
+                                        <th>Address></th>
+                                        <th>current Status</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+
+                                        <td>
+                                            <%= new Date(order.orderDate).toLocaleDateString()%>
+                                        </td>
+
+                                        <td>#<%= order._id.toString().substr(-5)%>
+                                        </td>
+
+                                        <td>
+                                            <%= order.address[0].name %>
+                                                <h6>
+                                                    <%= order.address[0].landmark%>,<span>
+                                                            <%= order.address[0].housename%>
+                                                        </span>
+                                                </h6>
+                                                <h6>
+                                                    <%= order.address[0].city%> -<span>
+                                                            <%= order.address[0].pincode%>
+                                                        </span>
+                                                </h6>
+                                        </td>
+
+                                        <td>
+                                            <%=order.orderStatus%>
+                                        </td>
+
+                                        <td>
+
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item"
+                                                        href="/orderManagement/status/pending/<%= order._id%>">Pending</a>
+                                                </li>
+                                                <li> <a class="dropdown-item"
+                                                        href="/orderManagement/status/Shipped/<%= order._id%>">Shipped</a>
+                                                </li>
+                                                <li> <a class="dropdown-item"
+                                                        href="/orderManagement/status/delivered/<%= order._id%>">Delivered</a>
+                                                </li>
+                                                <li> <a class="dropdown-item"
+                                                        href="/orderManagement/status/return/<%= order._id%>">Return</a>
+                                                </li>
+                                                <li><a class="dropdown-item"
+                                                        href="/orderManagement/status/cancelled/<%= order._id%>">Cancelled</a>
+                                                </li>
+                                            </ul>
+
+
+                                        </td>
+
+                                        <!-- <td>
+
+                                            <select class="font4" id="paymentStatus" onchange="updateStatus()">
+                                                <option value="pending" >pending </option>
+                                                <option value="paid">paid</option>
+                                                <option value="failed">failed</option>
+                                            </select>
+
+                                        </td> -->
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- <div class="main-panel">
+
+                <div class="order-details">
+                    <table>
+                        <tr>
+                           
+                        </tr>
+
+                       
+
+
+
+
+
+                    </table>
+                </div>
+
+            </div> -->
+
+
+
+
+
+
+
+            <script>
+                function updateStatus() {
+
+                    var orderId = '<%= order._id %>';
+                    console.log(orderId);
+                    var orderStatus = $('#orderStatus').val();
+                    var paymentStatus = $('#paymentStatus').val();
+
+                    fetch('/admin/update_status', {
+                        method: 'POST',
+                        headers: { "Content-type": "application/json" },
+                        body: JSON.stringify({
+                            orderId: orderId,
+                            orderStatus: orderStatus,
+                            paymentStatus: paymentStatus
+                        })
+                    })
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            console.log('Status updated successfully', data);
+
+                        })
+                        .catch(error => {
+                            console.error('Error updating status:', error);
+                        });
+                }
+            </script>
+
+</body>
+
+</html>

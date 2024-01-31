@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Handloom</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="/asset/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/asset/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="/asset/vendors/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="/asset/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/asset/vendors/owl-carousel-2/owl.carousel.min.css">
+    <link rel="stylesheet" href="/asset/vendors/owl-carousel-2/owl.theme.default.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="/asset/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="/asset/images/favicon.png" />
+</head>
+
+<body>
+    <div class="container-scroller">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+                <a class="sidebar-brand brand-logo" href="index.html"><img src="/img/logo.png" alt="logo"
+                        style="width:100%; height:auto;" /></a>
+                <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="asset/images/logo-mini.svg"
+                        alt="logo" style="width:50%; height:auto;" /></a>
+            </div>
+            <ul class="nav">
+                <li class="nav-item profile">
+                    <div class="profile-desc">
+                        <div class="profile-pic">
+                            <!-- <div class="count-indicator">
+                  <img class="img-xs rounded-circle " src="/assets/images/faces/face15.jpg" alt="">
+                  <span class="count bg-success"></span>
+                </div> -->
+
+                        </div>
+                        <a href="#" id="profile-dropdown" data-toggle="dropdown"><i
+                                class="mdi mdi-dots-vertical"></i></a>
+                    </div>
+                </li>
+                <li class="nav-item nav-category">
+                    <span class="nav-link">Navigation</span>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="/admin">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-speedometer"></i>
+                        </span>
+                        <span class="menu-title">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="/userMngt">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-chart-bar"></i>
+                        </span>
+                        <span class="menu-title">User Managment</span>
+                    </a>
+                </li>
+
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="/orderMngt">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-playlist-play"></i>
+                        </span>
+                        <span class="menu-title">Order Managment</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="/productMngt" aria-expanded="false"
+                        aria-controls="ui-basic">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-laptop"></i>
+                        </span>
+                        <span class="menu-title">Product Managment</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="/categoryMngt">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-table-large"></i>
+                        </span>
+                        <span class="menu-title">Category Managment</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="/couponMngt" aria-expanded="false"
+                        aria-controls="auth">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-security"></i>
+                        </span>
+                        <span class="menu-title">Coupon Managment</span>
+                    </a>
+                </li>
+
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="/salesReport" aria-expanded="false"
+                      aria-controls="auth">
+                      <span class="menu-icon">
+                        <i class="mdi mdi-security"></i>
+                      </span>
+                      <span class="menu-title">Sales Report</span>
+                    </a>
+                </li>
+
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="/offers" aria-expanded="false"
+                      aria-controls="auth">
+                      <span class="menu-icon">
+                        <i class="mdi mdi-security"></i>
+                      </span>
+                      <span class="menu-title">offers</span>
+                    </a>
+                </li>
+
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="/categoryoffers" aria-expanded="false" aria-controls="auth">
+                      <span class="menu-icon">
+                        <i class="mdi mdi-security"></i>
+                      </span>
+                      <span class="menu-title">Category offers</span>
+                    </a>
+                  </li>
+
+                <!-- <li class="nav-item menu-items">
+          <a class="nav-link" href="/admin/bannerMngt">
+            <span class="menu-icon">
+              <i class="mdi mdi-contacts"></i>
+            </span>
+            <span class="menu-title">Banner Managment</span>
+          </a>
+        </li> -->
+
+            </ul>
+        </nav>
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_navbar.html -->
+            <nav class="navbar p-0 fixed-top d-flex flex-row">
+                <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+                    <a class="navbar-brand brand-logo-mini" href="index.html"><img src="asset/images/logo-mini.svg"
+                            alt="logo" /></a>
+                </div>
+                <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+                    <button class="navbar-toggler navbar-toggler align-self-center" type="button"
+                        data-toggle="minimize">
+                        <span class="mdi mdi-menu"></span>
+                    </button>
+                    <ul class="navbar-nav w-100">
+                        <li class="nav-item w-100">
+                            <h3 style="color: rgb(126, 126, 126); padding-top:15px; ">Order Managment</h3>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="content-header">
+                        <div>
+                            <h2 class="content-title card-title">Order detail</h2>
+                            <p>Details for Order ID: #<%=order._id%>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 ms-auto text-md-end">
+                        <div class="col-lg-12 col-md-12 ms-auto text-md-end">
+                            <% if(order. orderStatus=='Return Requested' ){ %>
+                                <button class="btn btn-danger" disabled>
+                                    <%=order. orderStatus%>
+                                </button>
+                                <a class="btn btn-primary" id="returnapprove" data-id="<%=order._id%>" href="#">Approve
+                                    Return</a>
+                                <%} else if(order. orderStatus=='Cancelled' ) {%>
+                                    <div class="pe-5">
+                                        <button class="btn btn-danger" disabled>ORDER CANCELLED</button>
+                                    </div>
+                                    <%} else if(order. orderStatus=='Returned' ) {%>
+                                        <div class="pe-5">
+                                            <button class="btn btn-danger" disabled>ORDER RETURNED</button>
+                                        </div>
+                                        <%} else if(order. orderStatus=='Delivered' || order. orderStatus=='Completed' )
+                                            {%>
+                                            <div class="pe-5">
+                                                <button class="btn btn-success text-white" disabled>ORDER
+                                                    DELIVERED</button>
+                                            </div>
+                                            <%} else {%>
+                                                <select class="form-select d-inline-block mb-lg-0 mb-15 mw-200"
+                                                    name="status">
+                                                    <option class="status">
+                                                        <%=order. orderStatus%>
+                                                    </option>
+                                                    <option class="status">Confirmed</option>
+                                                    <option class="status">Shipped</option>
+                                                    <option class="status">Delivered</option>
+                                                    <% if(order. orderStatus=='Confirmed' ) { %>
+                                                        <option class="status">Shipped</option>
+                                                        <option class="status">Delivered</option>
+                                                        <% }else if(order. orderStatus=='Shipped' ) { %>
+                                                            <option class="status">Delivered</option>
+                                                            <% } %>
+
+                                                </select>
+                                                <a class="btn btn-primary orderid " id="update" role="button"
+                                                    href="/statusupdate/<%=order._id%>">Save</a>
+                                                <% } %>
+                                                    <!-- <a class="btn btn-secondary print ms-2" href="#"><i class="icon material-icons md-print"></i></a> -->
+                        </div>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-50 mt-20 order-info-wrap">
+                            <div class="col-md-4">
+                                <article class="icontext align-items-start">
+                                    <span class="icon icon-sm rounded-circle bg-primary-light">
+                                        <i class="text-primary material-icons md-person"></i>
+                                    </span>
+
+
+                                    <div class="text">
+                                        <h6 class="mb-1">Customer</h6>
+                                        <p class="mb-1">
+                                            <%=user.name%> <br>
+                                        </p>
+
+                                    </div>
+                                </article>
+                            </div> <!-- col// -->
+                            <div class="col-md-4">
+                                <article class="icontext align-items-start">
+                                    <span class="icon icon-sm rounded-circle bg-primary-light">
+                                        <i class="text-primary material-icons md-local_shipping"></i>
+                                    </span>
+                                    <div class="text">
+                                        <h6 class="mb-1">Order info</h6>
+                                        <p class="mb-1">
+                                            Shipping: Fargo express <br> Pay method: card <br> Status: new
+                                        </p>
+                                        <a href="#">Download info</a>
+                                    </div>
+                                </article>
+                            </div> <!-- col// -->
+                            <div class="col-md-4">
+                                <article class="icontext align-items-start">
+                                    <span class="icon icon-sm rounded-circle bg-primary-light">
+                                        <i class="text-primary material-icons md-place"></i>
+                                    </span>
+                                    <div class="text">
+                                        <h6 class="">Deliver to</h6>
+                                        <p class="mb-1">
+                                            city: <%=order.address[0].city%> <br>country: <%=order.address[0].country%>
+                                                    <br> Landmark: <%=order.address[0].landmark%> <br>Zip code:
+                                                        <%=order.address[0].zipcode%>
+                                        </p>
+                                        <a href="#">View profile</a>
+                                    </div>
+                                </article>
+                            </div> <!-- col// -->
+                        </div> <!-- row // -->
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th width="40%">Product</th>
+                                                <th width="20%">Unit Price</th>
+                                                <th width="20%">Quantity</th>
+                                                <th width="20%">Status</th>
+                                                <th width="20%" class="text-end">Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% order.cartData.forEach((item,index)=>{ %>
+                                                <tr>
+                                                    <td>
+                                                        <a class="itemside" href="#">
+                                                            <div class="left">
+                                                                <% if (item.productId.mainImage ) { %>
+                                                                    <img src="/product-images/<%= item.productId.mainImage[0]%>"
+                                                                        class="product-image" alt="It"
+                                                                        style="height: 100px; width: 100px;" />
+                                                                <% } else { %>
+                                                                        <img src="upload/img.webp" alt="Default Image"
+                                                                            class="product-image" />
+                                                                <% } %>
+                                                                            <!-- <img src="" width="40" height="40" class="img-xs" alt="Item"> -->
+                                                            </div>
+                                                            <div class="info">
+                                                                <%=item.productId.name %>
+                                                            </div>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <%= item.productId.price %>
+                                                    </td>
+                                                    <td>
+                                                        <%= item.productQuantity %>
+                                                    </td>
+                                                    <td><span class="badge rounded-pill alert-warning">
+                                                            <%= order.orderStatus %>
+                                                        </span>
+                                                    </td>
+                                                        
+                                                    <td class="text-end">
+                                                        <%= item.totalCostPerProduct %>
+                                                    </td>
+
+                                            <% }) %>
+                                        </tbody>
+
+
+                                    </table>
+
+                                </div> <!-- table-responsive// -->
+                            </div> <!-- col// -->
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-4">
+                                <div class="box shadow-sm">
+                                    <h6 class="mb-15">Payment info</h6>
+                                    <p>
+                                        <%=order.paymentType%>
+                                            
+                                    </p>
+                                    <h6 class="mb-15">Payment status</h6>
+                                    <% if(order.orderStatus=="Return" ){ %>
+                                        <span class="badge rounded-pill alert-danger">Refund</span>
+                                        <% } else if (order. paid=="paid" ) { %>
+                                            <span class="badge badge-pill badge-soft-success">Paid</span>
+                                            <% } else { %>
+                                                <span class="badge badge-pill badge-soft-danger">Unpaid</span>
+                                                <% } %>
+                                </div>
+
+                            </div> <!-- col// -->
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:partials/_footer.html -->
+
+                <!-- partial -->
+            </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.4.slim.js"
+    integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+
+</html>
+
+
+<script>
+
+    $('#update').on('click', function () {
+        console.log('clicked');
+        var orderid = $(this).data('update')
+        var status = $('.status:checked').text().trim()
+        console.log(status);
+
+        var data = {
+            "orderid": orderid,
+            "status": status
+        }
+
+        $.ajax({
+            url: '/admin/statusupdate',
+            method: "post",
+            data: data,
+            success: function (response) {
+                if (response.message == "1") {
+                    Swal.fire({
+                        title: "Success",
+                        text: "Status is updated",
+                        icon: "success",
+                        confirmButtonText: "OK"
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = "/admin/order"; // Redirect to another page
+                        }
+                    })
+
+                } else {
+                    Swal.fire({
+                        title: "Error",
+                        text: "Something went worng",
+                        icon: "error",
+                        confirmButtonText: "OK"
+                    })
+
+                }
+            }
+
+        });
+    });
+
+
+
+
+</script>

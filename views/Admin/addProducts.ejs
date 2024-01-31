@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Handloom</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="asset/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="asset/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="asset/vendors/jvectormap/jquery-jvectormap.css">
+  <link rel="stylesheet" href="asset/vendors/flag-icon-css/css/flag-icon.min.css">
+  <link rel="stylesheet" href="asset/vendors/owl-carousel-2/owl.carousel.min.css">
+  <link rel="stylesheet" href="asset/vendors/owl-carousel-2/owl.theme.default.min.css">
+  <!-- End plugin css for this page -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css"
+    integrity="sha512-hvNR0F/e2J7zPPfLC9auFe3/SE0yG4aJCOd/qxew74NN7eyiSKjr7xJJMu1Jy2wf7FXITpWS1E/RY8yzuXN7VA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"
+    integrity="sha512-9KkIqdfN7ipEW6B6k+Aq20PV31bjODg4AA52W+tYtAE0jE0kMx49bjJ3FgvS56wzmyfMUHbQ4Km2b7l9+Y/+Eg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
+    integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/additional-methods.min.js"
+    integrity="sha512-TiQST7x/0aMjgVTcep29gi+q5Lk5gVTUPE9XgN0g96rwtjEjLpod4mlBRKWHeBcvGBAEvJBmfDqh2hfMMmg+5A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css" rel="stylesheet">
+  <!-- inject:css -->
+  <!-- endinject -->
+  <!-- Layout styles -->
+  <link rel="stylesheet" href="asset/css/style.css">
+  <!-- End layout styles -->
+  <!-- <link rel="shortcut icon" href="/assets/images/favicon.png" /> -->
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_sidebar.html -->
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+        <a class="sidebar-brand brand-logo" href="index.html">Handloom</a>
+        <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="asset/images/logo-mini.svg" alt="logo"
+            style="width:50%; height:auto;" /></a>
+      </div>
+      <ul class="nav">
+        <li class="nav-item profile">
+          <div class="profile-desc">
+            <div class="profile-pic">
+              <!-- <div class="count-indicator">
+                  <img class="img-xs rounded-circle " src="/assets/images/faces/face15.jpg" alt="">
+                  <span class="count bg-success"></span>
+                </div> -->
+
+            </div>
+            <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
+          </div>
+        </li>
+        <li class="nav-item nav-category">
+          <span class="nav-link">Navigation</span>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="/admin">
+            <span class="menu-icon">
+              <i class="mdi mdi-speedometer"></i>
+            </span>
+            <span class="menu-title">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="/userMngt">
+            <span class="menu-icon">
+              <i class="mdi mdi-chart-bar"></i>
+            </span>
+            <span class="menu-title">User Managment</span>
+          </a>
+        </li>
+
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="/orderMngt">
+            <span class="menu-icon">
+              <i class="mdi mdi-playlist-play"></i>
+            </span>
+            <span class="menu-title">Order Managment</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="/productMngt" aria-expanded="false" aria-controls="ui-basic">
+            <span class="menu-icon">
+              <i class="mdi mdi-laptop"></i>
+            </span>
+            <span class="menu-title">Product Managment</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="/categoryMngt">
+            <span class="menu-icon">
+              <i class="mdi mdi-table-large"></i>
+            </span>
+            <span class="menu-title">Category Managment</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="/couponMngt" aria-expanded="false" aria-controls="auth">
+            <span class="menu-icon">
+              <i class="mdi mdi-security"></i>
+            </span>
+            <span class="menu-title">Coupon Managment</span>
+          </a>
+        </li>
+
+        <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="/salesReport" aria-expanded="false" aria-controls="auth">
+            <span class="menu-icon">
+              <i class="mdi mdi-security"></i>
+            </span>
+            <span class="menu-title">Sales Report</span>
+          </a>
+        </li>
+
+        <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="/offers" aria-expanded="false" aria-controls="auth">
+            <span class="menu-icon">
+              <i class="mdi mdi-security"></i>
+            </span>
+            <span class="menu-title">offers</span>
+          </a>
+        </li>
+
+        <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="/categoryoffers" aria-expanded="false" aria-controls="auth">
+            <span class="menu-icon">
+              <i class="mdi mdi-security"></i>
+            </span>
+            <span class="menu-title">Category offers</span>
+          </a>
+        </li>
+
+        <!-- <li class="nav-item menu-items">
+          <a class="nav-link" href="/bannerMngt">
+            <span class="menu-icon">
+              <i class="mdi mdi-contacts"></i>
+            </span>
+            <span class="menu-title">Banner Managment</span>
+          </a>
+        </li> -->
+
+      </ul>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar p-0 fixed-top d-flex flex-row">
+        <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="asset/images/logo-mini.svg"
+              alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <ul class="navbar-nav w-100">
+            <li class="nav-item w-100">
+              <h3 style="color: rgb(126, 126, 126); padding-top:15px; ">Add Product</h3>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item dropdown border-left">
+              <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown"
+                aria-expanded="false">
+                <i class="mdi mdi-email"></i>
+                <span class="count bg-success"></span>
+              </a>
+            </li>
+            <li class="nav-item dropdown border-left">
+              <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+                data-toggle="dropdown">
+                <i class="mdi mdi-bell"></i>
+                <span class="count bg-danger"></span>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+                <div class="navbar-profile">
+                  <img class="img-xs rounded-circle" src="asset/images/faces/face15.jpg" alt="">
+                  <p class="mb-0 d-none d-sm-block navbar-profile-name">Admin</p>
+                  <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+            data-toggle="offcanvas">
+            <span class="mdi mdi-format-line-spacing"></span>
+          </button>
+        </div>
+      </nav>
+      <div class="main-panel">
+        <div class="content-wrapper">
+
+          <div class="container-scroller">
+            <div class="container-fluid page-body-wrapper full-page-wrapper">
+              <div class="row w-100 m-0">
+                <div class="content-wrapper "
+                  style=" display: flex; justify-content: center; align-items: center; background-color:#000000;">
+                  <div style="width:50vw; background-color: black;">
+                    <div style="width: 50vw; padding: 30px;">
+                      <h3 style="margin-left:230px; margin-bottom:20px;">Add Product</h3>
+
+                      <form enctype="multipart/form-data" id="form">
+
+                        <div class="row">
+
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Name</label>
+                              <input type="text" class="form-control" id="productName" name="productName" />
+                            </div>
+                          </div>
+
+
+                          <div class="col-md-6">
+                            <div class="form-group">
+
+                              <label for="Category">Category</label>
+
+                              <select class="form-control p_input" name="category" id="category">
+                                <option value="">Category</option>
+                                <% categories.forEach(item=> { %>
+                                  <option value="<%= item.category%>">
+                                    <%= item.category %>
+                                  </option>
+                                  <% }) %>
+                              </select>
+
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Quantity</label>
+                              <input type="number" class="form-control p_input" id="quantity" name="quantity" />
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Brand</label>
+                              <input type="text" name="brand" id="brand" class="form-control p_input">
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Price</label>
+                              <input type="number" class="form-control p_input" id="price" name="price" />
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Description</label>
+                              <input type="text" class="form-control p_input" id="description" name="description"
+                                required />
+
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div id="imageDiv" class="d-flex flex-wrap gap-5"></div>
+                            <div class="form-group">
+                              <label>Main Images</label>
+                              <input type="file" class="form-control p_input" id="image" name="images" accept="image/*"
+                                multiple onchange="loadFile(event)" required />
+                            </div>
+                          </div>
+
+
+                        </div>
+
+                        <% if(typeof fieldRequired !='undefined' ){ %>
+                          <b style="color: rgb(230, 24, 24); margin-left: 20px;">
+                            <%= fieldRequired %>
+                          </b>
+                          <% } %>
+
+
+                            <div class="text-center">
+                              <button type="button" id="cropButton"
+                                class="btn btn-primary btn-block enter-btn">Add</button>
+                            </div>
+
+
+                      </form>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- content-wrapper ends -->
+              </div>
+              <!-- row ends -->
+            </div>
+            <!-- page-body-wrapper ends -->
+          </div>
+
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script>
+          let crop = [];
+          function loadFile(event) {
+            let imageDiv = document.getElementById("imageDiv");
+            imageDiv.innerHTML = "";
+
+            const maxImages = 3;
+            const files = event.target.files;
+            if (files.length > maxImages) {
+              alert(`Please select only up to ${maxImages} images.`);
+              document.getElementById("image").value = ""; // Clear the file input
+              return;
+            }
+
+            for (let i = 0; i < files.length; i++) {
+              const file = files[i];
+
+              const reader = new FileReader();
+
+              reader.onload = (e) => {
+                // Create an image element and set its source to the selected file
+                const div = document.createElement("div");
+                div.style.height = "300px";
+                div.style.width = "250px";
+                const img = new Image();
+                img.src = e.target.result;
+                img.style.margin = "30px";
+
+                // Append the image to the container
+                div.appendChild(img);
+                imageDiv.appendChild(div);
+
+                // Initialize Cropper.js on the image
+                const cropper = new Cropper(img, {
+                  aspectRatio: 3.5 / 4, // Set the aspect ratio as needed
+                  viewMode: 1, // Set the view mode as needed
+                });
+
+                // Store the cropper instance in the croppers array
+                crop.push(cropper);
+              };
+
+              reader.readAsDataURL(file);
+            }
+            document.getElementById("cropButton").addEventListener(
+              "click",
+              function () {
+                console.log("clicked");
+                let croppedImage = [];
+                let productName = document.getElementById("productName").value;
+                let price = document.getElementById("price").value;
+                let brand = document.getElementById("brand").value;
+                let category = document.getElementById("category").value;
+                let quantity = document.getElementById("quantity").value;
+                let description = document.getElementById("description").value;
+
+                let promises = [];
+
+                const formData = new FormData();
+                formData.append("productName", productName);
+                formData.append("price", price);
+                formData.append("brand", brand);
+                formData.append("category", category);
+                formData.append("quantity", quantity);
+                formData.append("description", description);
+
+                for (let i = 0; i < crop.length; i++) {
+                  const canvas = crop[i].getCroppedCanvas();
+
+                  let promise = new Promise((resolve) => {
+                    canvas.toBlob(function (blob) {
+                      const file = new File([blob], i + "croppedImg.png", {
+                        type: "image/png",
+                      });
+                      formData.append(`image${i}`, file);
+                      resolve();
+                    });
+                  });
+
+                  promises.push(promise);
+                }
+
+                // Wait for all promises to resolve before making the fetch call
+                Promise.all(promises).then(() => {
+                  fetch("/add-product", {
+                    method: "POST",
+                    body: formData,
+                  })
+                    .then((response) => response.json())
+                    .then((data) => {
+
+                      console.log(data.success);
+
+                      if (data.success) {
+                        Swal.fire({
+                          title: "Added!!",
+                          text: "Product Added succesfully",
+                          icon: "success",
+                          confirmButtonText: "OK",
+                        }).then((result) => {
+                          window.location.href = "/productmngt";
+                        });
+                      } else {
+                        Swal.fire({
+                          title: "Failed!!",
+                          text: "Failed to add product",
+                          icon: "error",
+                          confirmButtonText: "OK",
+                        }).then((result) => {
+                          window.location.href = "/product-list";
+                        });
+                      }
+                    })
+                    .catch((error) => {
+                      console.error("Error:", error);
+                    });
+                });
+              },
+              "image/png"
+            );
+          }
+
+          $(document).ready(function () {
+            $("#form").validate({
+              rules: {
+                productName: {
+                  required: true,
+                  pattern: /^[a-zA-Z]/,
+                },
+                price: {
+                  required: true,
+                  minlength: 1,
+                },
+                quantity: {
+                  required: true,
+                  minlength: 1,
+                },
+                description: {
+                  required: true,
+                  pattern: /^[a-zA-Z]/,
+                },
+                brand: {
+                  required: true,
+                  pattern: /^[a-zA-Z]/,
+                },
+                category: {
+                  required: true,
+                },
+                images: {
+                  required: true,
+                  // maxlength: 4,
+                },
+              },
+            });
+          });
+        </script>
+
+</body>
+
+</html>

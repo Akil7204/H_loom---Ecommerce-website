@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Handloom</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="asset/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="asset/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="asset/vendors/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="asset/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="asset/vendors/owl-carousel-2/owl.carousel.min.css">
+    <link rel="stylesheet" href="asset/vendors/owl-carousel-2/owl.theme.default.min.css">
+    <!-- End plugin css for this page -->
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css"
+        integrity="sha512-hvNR0F/e2J7zPPfLC9auFe3/SE0yG4aJCOd/qxew74NN7eyiSKjr7xJJMu1Jy2wf7FXITpWS1E/RY8yzuXN7VA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"
+        integrity="sha512-9KkIqdfN7ipEW6B6k+Aq20PV31bjODg4AA52W+tYtAE0jE0kMx49bjJ3FgvS56wzmyfMUHbQ4Km2b7l9+Y/+Eg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
+        integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/additional-methods.min.js"
+        integrity="sha512-TiQST7x/0aMjgVTcep29gi+q5Lk5gVTUPE9XgN0g96rwtjEjLpod4mlBRKWHeBcvGBAEvJBmfDqh2hfMMmg+5A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="asset/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="asset/images/favicon.png" />
+</head>
+
+<body>
+    <div class="container-scroller">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+                <a class="sidebar-brand brand-logo" href="index.html"><img src="/img/logo.png" alt="logo"
+                        style="width:100%; height:auto;" /></a>
+                <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="asset/images/logo-mini.svg"
+                        alt="logo" style="width:50%; height:auto;" /></a>
+            </div>
+            <ul class="nav">
+                <li class="nav-item profile">
+                    <div class="profile-desc">
+                        <div class="profile-pic">
+                            <!-- <div class="count-indicator">
+                  <img class="img-xs rounded-circle " src="/assets/images/faces/face15.jpg" alt="">
+                  <span class="count bg-success"></span>
+                </div> -->
+
+                        </div>
+                        <a href="#" id="profile-dropdown" data-toggle="dropdown"><i
+                                class="mdi mdi-dots-vertical"></i></a>
+                    </div>
+                </li>
+                <li class="nav-item nav-category">
+                    <span class="nav-link">Navigation</span>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="/admin">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-speedometer"></i>
+                        </span>
+                        <span class="menu-title">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="/userMngt">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-chart-bar"></i>
+                        </span>
+                        <span class="menu-title">User Managment</span>
+                    </a>
+                </li>
+
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="/orderMngt">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-playlist-play"></i>
+                        </span>
+                        <span class="menu-title">Order Managment</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="/productMngt" aria-expanded="false"
+                        aria-controls="ui-basic">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-laptop"></i>
+                        </span>
+                        <span class="menu-title">Product Managment</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="/categoryMngt">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-table-large"></i>
+                        </span>
+                        <span class="menu-title">Category Managment</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="/couponMngt" aria-expanded="false"
+                        aria-controls="auth">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-security"></i>
+                        </span>
+                        <span class="menu-title">Coupon Managment</span>
+                    </a>
+                </li>
+
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="/salesReport" aria-expanded="false"
+                        aria-controls="auth">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-security"></i>
+                        </span>
+                        <span class="menu-title">Sales Report</span>
+                    </a>
+                </li>
+
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="/offers" aria-expanded="false"
+                        aria-controls="auth">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-security"></i>
+                        </span>
+                        <span class="menu-title">offers</span>
+                    </a>
+                </li>
+
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="/categoryoffers" aria-expanded="false"
+                        aria-controls="auth">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-security"></i>
+                        </span>
+                        <span class="menu-title">Category offers</span>
+                    </a>
+                </li>
+
+                <!-- <li class="nav-item menu-items">
+          <a class="nav-link" href="/admin/bannerMngt">
+            <span class="menu-icon">
+              <i class="mdi mdi-contacts"></i>
+            </span>
+            <span class="menu-title">Banner Managment</span>
+          </a>
+        </li> -->
+
+            </ul>
+        </nav>
+
+
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_navbar.html -->
+            <nav class="navbar p-0 fixed-top d-flex flex-row">
+                <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+                    <a class="navbar-brand brand-logo-mini" href="index.html"><img src="/assets/images/logo-mini.svg"
+                            alt="logo" /></a>
+                </div>
+                <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+                    <button class="navbar-toggler navbar-toggler align-self-center" type="button"
+                        data-toggle="minimize">
+                        <span class="mdi mdi-menu"></span>
+                    </button>
+                    <ul class="navbar-nav w-100">
+                        <li class="nav-item w-100">
+                            <h3 style="color: rgb(126, 126, 126); padding-top:15px; ">offer Managment</h3>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav navbar-nav-right">
+
+                        <a href="/add-offer"
+                            style="width:200px; height:40px; display: flex;justify-content: center; align-items: center;"
+                            class="add btn btn-primary todo-list-add-btn">Add offer</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+                                <div class="navbar-profile">
+                                    <img class="img-xs rounded-circle" src="asset/images/faces/face15.jpg" alt="">
+                                    <p class="mb-0 d-none d-sm-block navbar-profile-name">Admin</p>
+                                    <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                                aria-labelledby="profileDropdown">
+                                <h6 class="p-3 mb-0">Profile</h6>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-settings text-success"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject mb-1">Settings</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-logout text-danger"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject mb-1">Log out</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <p class="p-3 mb-0 text-center">Advanced settings</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                        data-toggle="offcanvas">
+                        <span class="mdi mdi-format-line-spacing"></span>
+                    </button>
+                </div>
+            </nav>
+
+
+            <style>
+                .pagination-btn {
+                    padding: 50px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .pagination-btn a {
+                    text-decoration: none;
+                    color: #ececec;
+                }
+
+                .pagination-btn a :hover {
+                    color: #111;
+                }
+
+                .pagination-btn button:hover {
+                    color: #111;
+                }
+
+                .pagination-btn button:active {
+                    background-color: #fff;
+                    color: #111 !important;
+                }
+
+                .category-name span p {
+                    width: 200px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .modal-content p {
+                    width: 400px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                @media(max-width : 499px) {
+                    .modal-content p {
+                        width: calc(100% - 44px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            </style>
+
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <!-- <div><a class="badge badge-outline-primary" href="add-offer">Add offer</a></div> -->
+                    <!-- ======================== Table ========================= -->
+                    <!-- <div class=" row   mt-3">
+
+
+
+                        <div class="col-12 col-sm-6">
+                            <div class="row m-0">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <div class="col-sm-12">
+                                            <form action="/offers">
+                                                <select class="form-control" name="sortData">
+                                                    <option value="name">Name</option>
+                                                    <option value="startingDate">Starting Date</option>
+                                                    <option value="expiryDate">Expiry Date</option>
+                                                    <option value="minimumAmount">Minimum Amount</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <div class="col-sm-12">
+                                            <select class="form-control" name="sortOrder">
+                                                <option>Ascending</option>
+                                                <option>Descending</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sort form-group col-md-4"><button class=" btn btn-primary form-control">
+                                        sort
+                                    </button></div>
+                                </form>
+
+
+                            </div>
+
+
+                        </div>
+
+                    </div> -->
+
+                    <div style="margin-top: -10px;" class="card">
+                        <div class="card-body">
+
+                            <!-- <div style="max-width: unset;" class=" col-3 col-sm-6 grid-margin">
+                                <div class="form-group col-12 col-sm-6 mr-1">
+                                    <form action="/offers">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" value="" name="search"
+                                                placeholder="Search here..." aria-label="Recipient's username"
+                                                aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-sm btn-primary" type="submit">Search</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div> -->
+                            <h4 class="card-title">Offers</h4>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Product</th>
+                                            <th scope="col">Percentage</th>
+                                            <th scope="col">Start Date</th>
+                                            <th scope="col">End Date</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Edit</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% offers.forEach((offer,i)=> { %>
+                                            <tr>
+                                                <td>
+                                                    <%= i+1 %>
+                                                </td>
+                                                <td>
+                                                    <%= offer.product.name %>
+                                                </td>
+                                                <td>
+                                                    <%= offer.offerPercentage %>
+                                                </td>
+                                                <td>
+                                                    <%= offer.startDate.toLocaleString() %>
+                                                </td>
+                                                <td>
+                                                    <%= offer.endDate.toLocaleString() %>
+                                                </td>
+                                                <% if (offer.isAvailable) { %>
+                                                    <td><a href="/productoffer-status/<%= offer._id %>"
+                                                            class="btn btn-success">Available</a></td>
+
+                                                    <% }else{ %>
+
+                                                        <td><a href="/productoffer-status/<%= offer._id %>"
+                                                                class="btn btn-danger">Not Available</a>
+                                                        </td>
+                                                        <% }%>
+
+                                                            <td>
+                                                                <div
+                                                                    style="display: flex; align-items: center; gap: 10px;">
+
+                                                                    <a href="/edit-product-offer/<%= offer._id %>"
+                                                                        style="background-color:  rgb(36, 36, 39); color: white; padding: 10px 40px; font-size: 18px; font-weight: 300;">Edit</a>
+                                                                </div>
+                                                            </td>
+
+                                            </tr>
+                                            <% }) %>
+                                    </tbody>
+                                </table>
+
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination buttons -->
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        async function cancelOffer(offerId) {
+            const cancelbtn = document.getElementById(`cancel-${offerId}`)
+            const spanbtn = document.getElementById(`active-${offerId}`)
+            const cancelmsg = document.getElementById(`cancelspn-${offerId}`)
+            try {
+                const response = await axios.patch('/cancel-offer', { offerId })
+                console.log(response);
+                if (response.data.cancelled) {
+                    console.log("sucesss");
+                    cancelbtn.style.display = 'none'
+                    spanbtn.className = ''
+                    spanbtn.innerHTML = 'Cancelled'
+                    spanbtn.style.color = '#dc3545'
+
+                }
+            } catch (error) {
+                console.log(error.message);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

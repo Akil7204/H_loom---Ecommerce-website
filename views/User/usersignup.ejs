@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/User/usersignup.css">
+    <title>USER</title>
+</head>
+
+<body>
+    <div class="register-photo">
+        <div class="form-container">
+            <div class="image-holder"></div>
+            <form method="POST" action="/signup"  onsubmit="return validate()">
+                <h2 class="text-center"><strong>Create</strong> an account.</h2>
+                <p style="color: red;" >
+                    <%=locals.regerstrationMessage %>
+                </p>
+                <p style="color: red;" ><%=locals.wrong  %> </p>
+                <div class="col-md-12 form-group p_star">
+                    <input type="text" class="form-control" id="name" name="name" value=""
+                        placeholder="name">
+                    <label style="display: none;" id="name-error"></label>
+                </div>
+                <div class="col-md-12 form-group p_star">
+                    <input type="text" maxlength="10" class="form-control" id="phone-number"
+                        name="mobile" value="" placeholder="Mobile number">
+                    <label style="display: none;" id="phone-number-error"></label>
+                </div>
+                <div class="col-md-12 form-group p_star">
+                    <input type="email" class="form-control" id="email" name="email" value="" placeholder="email">
+                    <label style="display: none;" id="email-error"></label>
+                </div>
+                <div class="col-md-12 form-group p_star">
+                    <input type="password" class="form-control" id="password" name="password"
+                        value="" placeholder="Password">
+                    <label style="display: none;" id="password-error"></label>
+                </div>
+                
+                <div class="col-md-12 form-group p_star">
+                    <input type="password" class="form-control" id="confirm-password" name="confirmpassword" value="" placeholder=" ConformPassword">
+                    <label style="display: none;" id="confirm-password-error"></label>
+                </div>
+                <% if(typeof passworder !='undefined' ){ %>
+                    <b style="color:rgb(0, 0, 0); margin-left: 20px;">
+                        <%= passworder %>
+                    </b>
+                <% } %>
+
+                <div class="form-group">
+                    <label>Do you have an referral code from your acquaintances ?</label>
+                    <% if(referral){ %>
+                    <input minlength="4" name="referralCode" id="referralCode" type="text" class="form-control"
+                      placeholder="Enter the referral code?" value="<%= referral %>">
+                    <% }else{ %>
+                        <input minlength="4" name="referralCode" id="referralCode" type="text" class="form-control"
+                      placeholder="Enter the referral code?">
+                    <% } %>
+                </div>
+
+                <!-- <% if(typeof fieldRequired !='undefined' ){ %>
+                    <b style="color: rgb(0, 0, 0); margin-left: 20px;">
+                        <%= fieldRequired %>
+                    </b>
+                <% } %>
+
+                <% if(typeof duplicate !='undefined' ){ %>
+                    <%= duplicate %>
+                <% } %>  -->
+                
+                
+
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Sign Up</button></div><a
+                    href="/login" class="already">Already have an account? Login here.</a>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>function myFunction() {
+        let pass = document.getElementById("myInput");
+        if (pass.type === "password") {
+            pass.type = "text";
+        } else {
+            pass.type = "password";
+        }
+      }</script>
+
+<script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+  </script>
+
+
+<script>
+    function checkPassword() {
+        let password = document.getElementById("password").value;
+        let confirmPassword = document.getElementById("confirm-password").value;
+        console.log("Password:", password, "\n", "Confirm Password:", confirmPassword);
+        let message = document.getElementById("confirm-password-error");
+        console.log(message);
+
+        if (password.length !== 0) {
+            if (password === confirmPassword) {
+                return true; // Allow form submission
+            } else {
+                message.style.display = ''
+                message.textContent = "Passwords don't match";
+                message.style.color = "#ff4d4d";
+                return false; // Prevent form submission
+            }
+        } else {
+            message.textContent = "Password can't be empty!";
+            message.style.color = "#ff4d4d";
+            return false; // Prevent form submission
+        }
+    }
+    function validate() {
+        var name = document.getElementById("name").value.trim();
+        var phone = document.getElementById("phone-number").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm-password").value;
+        var nameFormat = /^[a-zA-Z ]+$/;
+        var emailFormat = /^\S+@\S+\.\S+$/;
+        var phoneFormat = /^\d{10}$/;
+        let nameError = document.getElementById("name-error");
+        let emailError = document.getElementById("email-error");
+        let phoneError = document.getElementById("phone-number-error");
+        let passwordError = document.getElementById("password-error");
+
+        if (!name.match(nameFormat)) {
+            
+            nameError.style.display = ''
+            nameError.textContent = "Enter Correct Name!";
+            nameError.style.color = "#ff4d4d";
+            return false;
+        } else nameError.style.display = 'none'
+
+        if (!phone.match(phoneFormat)) {
+            phoneError.style.display = ''
+            phoneError.textContent = "Enter Valid Phone Number!";
+            phoneError.style.color = "#ff4d4d";
+            return false;
+        } else phoneError.style.display = 'none'
+
+        if (!email.match(emailFormat)) {
+            emailError.style.display = ''
+            emailError.textContent = "Invalid Email Address!";
+            emailError.style.color = "#ff4d4d";
+            return false;
+        } else emailError.style.display = 'none'
+
+        if (password.length < 6) {
+            passwordError.style.display = ''
+            passwordError.textContent = "Password should be at least 6 characters!";
+            passwordError.style.color = "#ff4d4d";
+            return false;
+        } else passwordError.style.display = 'none'
+
+        // if (password !== confirmPassword) {
+        //     window.alert("Passwords don't match.");
+        //     document.getElementById("confirm-password-2").focus();
+        //     return false;
+        // }
+
+        return checkPassword();
+
+        return true;
+    }
+
+</script>
+
+</body>
+
+</html>
