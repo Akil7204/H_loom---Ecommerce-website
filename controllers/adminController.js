@@ -101,7 +101,9 @@ const userMngt = async (req, res) => {
 };
 
 const categoryMngt = async (req, res) => {
+  
   const categories = await categoryModel.find().lean();
+
   res.render("categoryMngt", { categories });
 };
 
@@ -289,52 +291,6 @@ const editProductController = async (req, res) => {
     console.log("error in updating image ", error);
   }
 };
-
-// const update_product = async (req, res) => {
-//   try {
-//     console.log("update_product");
-//     let dataobj;
-//     console.log(req.body);
-
-//     const images = [];
-//     if (req.files) {
-//       for (let i = 0; i < req.files.length; i++) {
-//         images[i] = req.files[i].filename;
-//       }
-//       dataobj = {
-//         productname: req.body.productname,
-//         category: req.body.category,
-//         brand: req.body.brand,
-//         quantity: req.body.quantity,
-//         price: req.body.price,
-//         offerPrice: req.body.price,
-//         description: req.body.description,
-//         mainImage: images,
-//       };
-//     } else {
-//       dataobj = {
-//         name: req.body.productname,
-//         category: req.body.category,
-//         brand: req.body.brand,
-//         quantity: req.body.quantity,
-//         price: req.body.price,
-//         offerPrice: req.body.price,
-//         description: req.body.description,
-//       };
-//     }
-//     // console.log(dataobj);
-//     await product.findByIdAndUpdate(
-//       { _id: req.body.id },
-//       { $set: dataobj },
-//       { new: true }
-//     );
-
-//     res.redirect("/productMngt");
-//   } catch (error) {
-//     console.log(error.message);
-//     res.status(500).send({ success: false, msg: error.message });
-//   }
-// };
 
 const listProduct = async (req, res) => {
   var id = req.params.id;
@@ -607,7 +563,7 @@ const adminLogout = (req, res) => {
 // ----------------------------------------coupen mangment--------------------------
 
 const couponMngt = async (req, res) => {
-  let coupon = await couponModel.find({});
+  let coupon = await couponModel.find();
   res.render("couponMngt", { coupon });
 };
 
@@ -659,7 +615,9 @@ const postAddCoupon = async (req, res) => {
 
     coupon.save();
     console.log("Coupon saved successfully");
+
     res.redirect("/couponMngt");
+
   }
 };
 
@@ -786,7 +744,7 @@ const salesReport = async (req, res) => {
       let { salesData, dateValues } = req.session.adminuser;
       return res.render("sales-report", { salesData, dateValues });
     }
-    let salesData = await orderModel.find().populate("userId");
+    let salesData = await orderModel.find({ orderStatus: 'Delivered' }).populate("userId");
 
     res.render("sales-report", { 
       salesData,

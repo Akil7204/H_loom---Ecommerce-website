@@ -917,9 +917,20 @@ const postCheckout = async (req, res) => {
       paid: paiduser,
     });
 
+    let cartData = await cartCollection
+      .find({ userId: req.session.user._id })
+      .populate("productId");
+
+    cartData.map(async (v) => {
+      v.productId.quantity -= v.productQuantity;
+      await v.productId.save();
+      return v;
+    });
+
     await cartCollection.deleteMany({ userId: req.session.user._id });
 
-    console.log("hooooooooooooo");
+    console.log("oder placed");
+    
     if (req.session.payment == "cod") {
       res.send({ message: "1" });
     } else {
@@ -958,7 +969,7 @@ const getOrders = async (req, res) => {
 
     let empty;
     order.length == 0 ? (empty = true) : (empty = false);
-
+    
     res.render("orders", {
       order,
       count,
@@ -992,8 +1003,8 @@ const cancel_order = async (req, res) => {
     const orderId = req.body.id;
     const userId = req.session.user;
 
-    let order = await orderModel.findById(orderId);
-    console.log(order);
+    let order = await orderModel.findById({_id: orderId});
+    console.log(order.cartData);
     if (!order.cancel) {
 
       if (order.paymentType != "cod") {

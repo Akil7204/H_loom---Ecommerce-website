@@ -29,6 +29,9 @@ app.use(express.urlencoded({extended:true}))
 app.use('/',userRouter)
 app.use(adminRouter)
 
+app.use("/*", (req, res) => {
+    res.render("User/404");
+  });
 
 
 app.listen(process.env.PORT,()=>{console.log('http://localhost:3500')})
