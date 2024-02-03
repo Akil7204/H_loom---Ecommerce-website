@@ -46,7 +46,7 @@ const getSignupPage = (req, res) => {
     res.redirect("/");
   } else {
 
-    res.render("usersignUp",{referral});
+    res.render("usersignup",{referral});
   }
 };
 
@@ -660,7 +660,7 @@ const getuserProfile = async (req, res) => {
     const balance = wallet.balance;
     req.session.productid = false;
 
-    res.render("Profile", { user, balance });
+    res.render("profile", { user, balance });
   } catch (err) {
     console.log(err);
   }
