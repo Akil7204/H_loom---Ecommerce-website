@@ -732,7 +732,7 @@
 
         let response = await fetch('/cart/decQty/' + id, { method: 'PUT' })
         let data = await response.json()
-        window.location.reload()
+        // window.location.reload()
         console.log(data);
         productQuantityElement.innerHTML = await data.cartProduct.productQuantity;
         totalCostPerProductElement.innerHTML = '₹' + await data.cartProduct.totalCostPerProduct;
@@ -760,13 +760,13 @@
       if (Number(productQuantityElement.innerText) >= Number(stockLimitElement)) {
         return Swal.fire({
           icon: "info",
-          title: "Avlo dan da iruku venna",
+          title: "Maximum quantity reached",
           text: "Something went wrong!",
         });
       } else {
         let response = await fetch('/cart/incQty/' + id, { method: 'PUT' })
         let data = await response.json()
-        window.location.reload()
+        // window.location.reload()
         productQuantityElement.innerHTML = await data.cartProduct.productQuantity;
         console.log(productQuantityElement.innerHTML);
         totalCostPerProductElement.innerHTML = '₹' + await data.cartProduct.totalCostPerProduct;

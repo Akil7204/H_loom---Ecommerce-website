@@ -42,7 +42,7 @@ router.get('/shop/filter/category/:categoryName', controller.filterCategory)
 router.get('/productView/:id',controller.getproductDetails)
 router.get('/shop/filter/priceRange', controller.filterPriceRange)
 router.get('/shop/sort/priceAscending', controller.sortPriceAscending)
-
+router.get('/shop/sort/priceDescending', controller.sortPriceDescending)
 
 
 
@@ -87,7 +87,7 @@ router.get('/add-address', userAuth, controller.getAddress)
 router.post('/add-address', userAuth, controller.postAddress)
 router.get('/edit-address/:id', userAuth, controller.getEditAddress)
 router.post('/edit-address/:id', userAuth, controller.posteditAddress)
-router.get('/shop/sort/priceDescending', controller.sortPriceDescending)
+
 router.get('/delete-address/:id', userAuth,controller.deleteAddress)
 
 // --------------------------wallet--------------------------

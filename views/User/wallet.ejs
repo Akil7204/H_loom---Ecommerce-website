@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Profile - BIGBAG Store</title>
+    <title>walletHistory - H_loom</title>
 
     <!-- PLUGINS CSS STYLE -->
     <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -317,7 +317,7 @@
                                 Orders</a>
                             <a class='btn btn-default' href='/wishlist'><i class="fa fa-gift"
                                     aria-hidden="true"></i>Wishlist</a>
-                            <a class='btn btn-default me-0' href='my-tickets.html'><i class="fa fa-tag"
+                            <a class='btn btn-default me-0' href='#'><i class="fa fa-tag"
                                     aria-hidden="true"></i>Tickets</a>
                         </div>
                     </div>
@@ -328,11 +328,9 @@
                             <div class="row">
                                 <div class="col-md-4 col-lg-3 col-xl-2 col-12">
                                     <div class="thumbnail">
-                                        <img src="assets/img/products/profile/profile-image.jpeg" alt="profile-image">
+                                        <img src="/assets/img/products/profile/profile-image.jpg" alt="profile-image" >
 
                                     </div>
-
-
 
                                 </div>
                                 <div class="col-md-8 col-md-10  col-12">
@@ -378,6 +376,7 @@
                                             </thead>
                                             <tbody>
                                                 <% if( wallet.walletHistory ) { %>
+                                                    <%    wallet.walletHistory.reverse()   %>
                                                     <% for( let items of wallet.walletHistory ) { %>
                                                         <tr>
                                                             <td>
